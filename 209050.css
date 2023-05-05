@@ -1,0 +1,84 @@
+* {
+    font-family: Calibri;
+    font-size: 13pt;
+}
+
+p {
+    margin: 0;
+}
+
+p span {
+    text-decoration: underline;
+}
+ 
+.profileCard {
+    background-color: #8FAADC;
+    width: 450px;
+    height: 250px;
+    border-radius: 50px;
+    border: 1.5px solid #2f528f;
+    display: grid;
+    grid-template-columns: 150px auto;
+    column-gap: 25px;
+    row-gap: 20px;
+    padding: 25px;
+}
+
+.sloganCard {
+    background-color: #4472C4;
+    width: 360px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 50px auto;
+    align-items: start;
+    position: absolute;
+    top: 125px;
+    left: 200px;
+    border: 1.5px solid #2f528f;
+    padding-top: 25px;
+}
+
+h1 {
+    position: relative;
+    top: -45px;
+    left: 10px;
+    font-size: 45pt;
+    font-weight: 500;
+    color: white;
+    padding: 0;
+    margin: 0;
+    align-self: self-start;
+}
+
+.slogan {
+    color: white;
+}
+
+img.profilePicture {
+    border-radius: 50%;
+    margin-left: 16px;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border: 1.5px solid #7f7f7f;
+    border-radius: 10px;
+    background-color: rgba(21, 21, 21, 0.2);
+    /* #8497b0 */
+    padding: 0px;
+    justify-self: center;
+    transition: all ease 0.3s;
+    padding: 3px 20px;
+}
+
+.icon:hover {
+    box-shadow: -1px 1px 4px rgba(126, 126, 126, 0.9);
+    padding: 0px 20px 6px;
+}
+
+.logo {
+    grid-column: span 2;
+    margin-left: auto;
+    align-self: flex-end;
+}
