@@ -1,14 +1,11 @@
 class AttributeFetcher {
   constructor() {
     this.fetchDataButton = document.getElementById("fetch-data-button");
-    this.addClickListener();
+    this.fetchDataButton.addEventListener("click", this.handleButtonClick.bind(this));
   }
 
-  addClickListener() {
-    this.fetchDataButton.addEventListener("click", () => {
-      console.log("It is working");
-      //this.getAttributes();
-    });
+  handleButtonClick() {
+    this.getAttributes();
   }
 
   getAttributes() {
