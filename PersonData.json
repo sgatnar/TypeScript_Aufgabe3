@@ -2,6 +2,6 @@
     "name": "Sven Gatnar",
     "studiengang": "AIB",
     "fachsemester": "6",
-    "image_url": "https://example.com/image.jpg",
+    "image_url": "http://127.0.0.1:5500/209050.jpg",
     "statement": "Ich habe mich f&uumlr <span>Web Application Development</span> entschieden, weil ich mein eigenes Startup gegr&uumlndet habe und daf&uumlr eine Website programmieren m&oumlchte."
 }
