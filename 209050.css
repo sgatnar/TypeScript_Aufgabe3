@@ -12,6 +12,7 @@ p span {
 }
  
 .profileCard {
+    margin-bottom: 100px;
     background-color: #8FAADC;
     width: 450px;
     height: 250px;
