@@ -40,6 +40,7 @@ var Visitenkarte = /** @class */ (function () {
         profileCard.appendChild(icon);
         var sloganCard = document.createElement('div');
         sloganCard.classList.add('sloganCard');
+        sloganCard.style.marginBottom = '25px';
         card.appendChild(sloganCard);
         var h1 = document.createElement('h1');
         h1.textContent = ',,';

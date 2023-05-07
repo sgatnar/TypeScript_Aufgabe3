@@ -64,6 +64,7 @@ interface PersonData {
   
       const sloganCard = document.createElement('div');
       sloganCard.classList.add('sloganCard');
+      sloganCard.style.marginBottom = '25px';
       card.appendChild(sloganCard);
   
       const h1 = document.createElement('h1');
