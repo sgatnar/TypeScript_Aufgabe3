@@ -12,7 +12,7 @@ p span {
 }
  
 .profileCard {
-    margin-bottom: 100px;
+    margin-bottom: 10px;
     background-color: #8FAADC;
     width: 450px;
     height: 250px;
@@ -23,6 +23,7 @@ p span {
     column-gap: 25px;
     row-gap: 20px;
     padding: 25px;
+    position: relative;
 }
 
 .sloganCard {
@@ -32,11 +33,11 @@ p span {
     display: grid;
     grid-template-columns: 50px auto;
     align-items: start;
-    position: absolute;
-    top: 125px;
-    left: 200px;
+    margin-top: -80px;
+    margin-left: 362px;
     border: 1.5px solid #2f528f;
     padding-top: 25px;
+    transform: translate(-50%, -50%);
 }
 
 h1 {
