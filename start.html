@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meine Startseite</title>
+  <style>
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+    }
+    
+    h1 {
+      color: #333333;
+    }
+    
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    
+    .profile-img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Willkommen auf meiner Startseite!</h1>
+  
+    <h2>Meine Dropdown-Liste</h2>
+    <select id="person-dropdown">
+    </select>
+    
+    <img class="profile-img" id="profile-image" src="" alt="Profilbild">
+  </div>
+
+  <script>
+    // JSON-Daten aus der person.json
+    const jsonData = {
+      "person": [
+        {
+            "name": "Sven Gatnar",
+            "image_url": "http://127.0.0.1:5500/209050.jpg",
+        },
+        {
+            "name": "Eric Eisemann",
+            "image_url": "http://127.0.0.1:5500/209049.jpg",
+        },
+        {
+            "name": "David Löwe",
+            "image_url": "http://127.0.0.1:5500/209091.jpg",
+        }
+      ]
+    };
+
+    const dropdown = document.getElementById('person-dropdown');
+    const profileImage = document.getElementById('profile-image');
+
+    // Iteriere über die Personen und füge Optionen zum Dropdown hinzu
+    jsonData.person.forEach(person => {
+      const option = document.createElement('option');
+      option.value = person.image_url;
+      option.textContent = person.name;
+      dropdown.appendChild(option);
+    });
+
+    // Beim Ändern des Dropdown-Werts Bild aktualisieren
+    dropdown.addEventListener('change', () => {
+      profileImage.src = dropdown.value;
+    });
+
+    // Standardmäßig das erste Bild anzeigen
+    profileImage.src = jsonData.person[0].image_url;
+  </script>
+</body>
+</html>
