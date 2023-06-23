@@ -5,21 +5,21 @@
             "studiengang": "AIB",
             "fachsemester": "6",
             "image_url": "http://127.0.0.1:5500/209050.jpg",
-            "statement": "Ich habe mich f&uumlr <span>Web Application Development</span> entschieden, weil ich mein eigenes Startup gegr&uumlndet habe und daf&uumlr eine Website programmieren m&oumlchte."
+            "statement": " weil ich mein eigenes Startup gegr&uumlndet habe und daf&uumlr eine Website programmieren m&oumlchte."
         },
         {
             "name": "Eric Eisemann",
             "studiengang": "AIB",
             "fachsemester": "6",
             "image_url": "http://127.0.0.1:5500/209049.jpg",
-            "statement": "Ich habe mich für <span>Web Application Development</span> entschieden, da ich mein Wissen in viele Verschiedene Berreiche erweitern möchte. Bisher habe leider in diesem Berreich noch nicht so viel Erfahrung sammeln können."
+            "statement": " da ich mein Wissen in viele Verschiedene Berreiche erweitern möchte. Bisher habe leider in diesem Berreich noch nicht so viel Erfahrung sammeln können."
         },
         {
             "name": "David Löwe",
             "studiengang": "AIB",
             "fachsemester": "6",
             "image_url": "http://127.0.0.1:5500/209091.jpg",
-            "statement": "Ich habe mich für <span>Web Application Development</span> entschieden, weil ich noch nicht viel Erfahrung habe aber trotzdem viel Interesse in diesem Bereich zeige."
+            "statement": " weil ich noch nicht viel Erfahrung habe aber trotzdem viel Interesse in diesem Bereich zeige."
         }
     ]
 }

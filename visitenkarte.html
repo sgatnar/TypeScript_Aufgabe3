@@ -2,119 +2,40 @@
 <html>
 <head>
     <title>Visitenkarte</title>
-    <style>
-        /* Füge hier deine CSS-Stile hinzu */
-        .center-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        }
-
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .button:hover {
-            background-color: #45a049;
-        }
-
-        .card {
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            padding: 10px;
-            margin-bottom: 10px;
-            width: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .profilePicture {
-            width: 120px;
-        }
-
-        .info {
-            margin-top: 10px;
-            text-align: center;
-        }
-
-        .name {
-            font-weight: bold;
-        }
-
-        .statement {
-            margin-top: 10px;
-            font-style: italic;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="vistenkarte.css">
 </head>
 <body>
-    <div class="center-container">
+<div class="center-container">
+    <div class="card-container">
         <div id="cards-container" data-bind="foreach: cards">
             <div class="card">
-                <img class="profilePicture" width="120" data-bind="attr: { src: image_url }">
-                <div class="info">
-                    <p>Name: <span data-bind="text: name"></span></p>
-                    <p>Studiengang: <span data-bind="text: studiengang"></span></p>
-                    <p>Fachsemester: <span data-bind="text: fachsemester"></span></p>
-                    <p data-bind="html: statement"></p>
+                <div class="gridItem">
+                    <img class="profilePicture" width="120" data-bind="attr: { src: image_url }">
                 </div>
+                <div class="info gridItem">
+                    <p><strong>Name:</strong> <span data-bind="text: name"></span></p>
+                    <p><strong>Studiengang:</strong> <span data-bind="text: studiengang"></span></p>
+                    <p><strong>Fachsemester:</strong> <span data-bind="text: fachsemester"></span></p>
+                    
+                </div>
+                <a href="https://git.it.hs-heilbronn.de/" class="icon">
+                    <img src="gitlab-icon-rgb.png" width="60px">
+                </a>
+            </div>
+            <div class="sloganCard">
+                <h1>,,</h1>
+                <p class="statement">
+                Ich habe mich für <span>Web Application Development</span> entschieden,<span data-bind="text: statement"></span> 
+                </p>
+                <img src="hhn-logo.png" class="logo" width="170px"/>
             </div>
         </div>
-
-        <button id="back-button" class="button" data-bind="click: goBack">Zurück zur Startseite</button>
+        <button class="back-button" data-bind="click: goBack">Zurück</button>
     </div>
+</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
-    <script src="visitenkarten-build.js"></script>
-    <script>
-        function Visitenkarte(data) {
-            var self = this;
-
-            self.name = ko.observable(data.name || '');
-            self.studiengang = ko.observable(data.studiengang || '');
-            self.fachsemester = ko.observable(data.fachsemester || '');
-            self.image_url = ko.observable(data.image_url || '');
-            self.statement = ko.observable(data.statement || '');
-        }
-
-        function VisitenkarteViewModel() {
-            var self = this;
-
-            self.cards = ko.observableArray([]);
-
-            self.goBack = function() {
-                window.location.href = 'start.html';
-            };
-
-            self.loadPersonData = function() {
-                fetch('./Person.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        var params = new URLSearchParams(window.location.search);
-                        var selectedPersonName = params.get('name');
-                        var selectedPersonData = data.person.find(person => person.name === selectedPersonName);
-                        var card = new Visitenkarte(selectedPersonData);
-                        self.cards.push(card);
-                    })
-                    .catch(error => {
-                        console.error('Fehler beim Laden der Daten:', error);
-                    });
-            };
-
-            self.loadPersonData();
-        }
-
-        ko.applyBindings(new VisitenkarteViewModel());
-    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+<script src="visitenkarten-build.js"></script>
+<script src="visitenkarte-skript.js"></script>
 </body>
 </html>
