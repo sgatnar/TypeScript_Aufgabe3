@@ -9,7 +9,6 @@ Ablauf:
 5. Zurück Button leitet wieder auf die "start.html" zurück.
 
 
-
 Hinzufügen einer neuen Person: 
 
 1. Person.json Datei öffnen.
@@ -23,6 +22,7 @@ Hinzufügen einer neuen Person:
         }
 3. Wenn dies getan ist, wurde eine Neue Person im Dropdown hinzugefügt, wie oben im "Ablauf" erklärt.
 4. Danach kann alles wie im Ablauf oben gemacht werden.  
+
 
 
 Benutzte Dateien
