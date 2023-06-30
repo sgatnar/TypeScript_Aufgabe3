@@ -23,3 +23,16 @@ Hinzufügen einer neuen Person:
         }
 3. Wenn dies getan ist, wurde eine Neue Person im Dropdown hinzugefügt, wie oben im "Ablauf" erklärt.
 4. Danach kann alles wie im Ablauf oben gemacht werden.  
+
+
+Benutzte Dateien
+
+- alle jpg's / png's
+
+- Person.json Hinterlegen der Person Daten
+- start.html= Start html Seite
+- visitenkarte.htmt = Visitenkarte html Seite
+- start.js 
+- visitenkarte-skript.js
+- vistenkarteViewModel.js
+- vistenkarte.css = Design der vistenkarte.html
